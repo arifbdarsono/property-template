@@ -2,17 +2,29 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jual Rumah - Properti Impian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PropertiImpian - Jual Rumah Anda</title>
+
   <!-- Materialize CSS CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
   <!-- Font Awesome CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
   <style>
+    /* Navbar styles */
+    nav {
+      background-color: #2e7d32; /* green darken-3 */
+    }
+    .brand-logo {
+      font-weight: 700;
+    }
     .hero-image {
       height: 400px;
+      background-image: url('https://placehold.co/1200x400?text=Rumah+Impian');
       background-size: cover;
       background-position: center;
+      margin-bottom: 30px;
+      border-radius: 8px;
     }
     .price-tag {
       font-size: 2rem;
@@ -20,116 +32,172 @@
       font-weight: 700;
     }
     main {
-      padding: 20px 15px;
+      padding: 0 15px 30px 15px;
     }
     footer.page-footer {
       padding: 10px 0;
+      background-color: #2e7d32;
+      color: #fff;
+      text-align: center;
     }
-    /* Override Material Icons with Font Awesome in sidenav */
+
+    /* Sidenav icon style */
     .sidenav .fa {
       font-size: 1.2rem;
       margin-right: 15px;
       vertical-align: middle;
     }
+
+    /* Responsive map container */
+    .responsive-map {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .responsive-map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    ul.contact-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.contact-list li {
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="green darken-1">
-      <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo">PropertiImpian</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#features">Fitur</a></li>
-          <li><a href="#gallery">Galeri</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </div>
-    </nav>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo">PropertiImpian</a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#features">Fitur</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Side navigation drawer -->
-    <ul id="slide-out" class="sidenav">
-      <li><div class="user-view green lighten-2">
-        <a href="#user"><img class="circle" src="https://placehold.co/80x80/png?text=House" alt="Profile"/></a>
-        <a href="#name"><span class="white-text name">Properti Impian</span></a>
-        <a href="#email"><span class="white-text email">info@propertiimpian.com</span></a>
-      </div></li>
-      <li><a href="#features"><i class="fa fa-home"></i>Fitur</a></li>
-      <li><a href="#gallery"><i class="fa fa-image"></i>Galeri</a></li>
-      <li><a href="#contact"><i class="fa fa-phone"></i>Kontak</a></li>
-    </ul>
-  </header>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="#features"><i class="fas fa-check-circle"></i> Fitur</a></li>
+    <li><a href="#gallery"><i class="fas fa-image"></i> Galeri</a></li>
+    <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> Kontak</a></li>
+  </ul>
 
-  <!-- Hero image -->
-  <section class="hero-image" style="background-image: url('https://placehold.co/1400x400/png?text=Rumah+Modern');">
-  </section>
+  <!-- Hero section -->
+  <div class="hero-image"></div>
 
   <main class="container">
-    <!-- Property Info -->
-    <div class="row" id="features">
-      <div class="col s12 m8">
-        <h4>Rumah Modern dan Nyaman di Lokasi Strategis</h4>
-        <p>
-          Rumah ini dilengkapi dengan 3 kamar tidur, 2 kamar mandi, taman luas, dan garasi untuk dua mobil. Cocok untuk keluarga yang menginginkan hunian nyaman dan mudah dijangkau ke berbagai fasilitas umum.
-        </p>
-        <ul class="collection with-header">
-          <li class="collection-header"><h5>Fitur Utama</h5></li>
-          <li class="collection-item">Luas Bangunan: 150 m²</li>
-          <li class="collection-item">Luas Tanah: 200 m²</li>
-          <li class="collection-item">Dapur Modern & Terbuka</li>
-          <li class="collection-item">Sistem Keamanan 24 Jam</li>
-          <li class="collection-item">Dekat Sekolah, Mall, dan Rumah Sakit</li>
-        </ul>
-        <h5 class="price-tag">Rp 1.200.000.000,-</h5>
-        <a class="btn-large green waves-effect waves-light" href="#contact">Hubungi Kami</a>
-      </div>
 
-      <!-- Gallery -->
-      <div class="col s12 m4" id="gallery">
-        <h5>Galeri Foto</h5>
-        <div class="card">
-          <div class="card-image">
-            <img src="https://placehold.co/400x300/png?text=Taman+Rumah" alt="Taman Rumah"/>
-          </div>
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <h5 class="green-text text-darken-3">Fitur Unggulan</h5>
+      <div class="row">
+        <div class="col s12 m4">
+          <i class="fas fa-home fa-3x green-text text-darken-3"></i>
+          <h6>Desain Modern</h6>
+          <p>Rumah dengan desain modern dan efisien, cocok untuk keluarga masa kini.</p>
         </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="https://placehold.co/400x300/png?text=Dapur+Modern" alt="Dapur Modern"/>
-          </div>
+        <div class="col s12 m4">
+          <i class="fas fa-tree fa-3x green-text text-darken-3"></i>
+          <h6>Lingkungan Asri</h6>
+          <p>Lokasi strategis dilingkupi taman dan area hijau yang nyaman.</p>
         </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="https://placehold.co/400x300/png?text=Kamar+Tidur+Nyaman" alt="Kamar Tidur"/>
-          </div>
+        <div class="col s12 m4">
+          <i class="fas fa-shield-alt fa-3x green-text text-darken-3"></i>
+          <h6>Keamanan Terjamin</h6>
+          <p>Sistem keamanan 24 jam dan akses terbatas untuk ketenangan Anda.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Contact Section -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+      <h5 class="green-text text-darken-3">Galeri Properti</h5>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://placehold.co/400x300?text=Ruang+Tamu" alt="Ruang Tamu" loading="lazy"/>
+            </div>
+            <div class="card-content">
+              <p>Ruang tamu yang luas dan nyaman</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://placehold.co/400x300?text=Dapur" alt="Dapur" loading="lazy" />
+            </div>
+            <div class="card-content">
+              <p>Dapur modern dengan peralatan lengkap</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://placehold.co/400x300?text=Kamar+Tidur" alt="Kamar Tidur" loading="lazy" />
+            </div>
+            <div class="card-content">
+              <p>Kamar tidur yang nyaman dan tenang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Location Map -->
     <section id="contact" class="section">
-      <h5>Kontak Kami</h5>
-      <p>Untuk informasi lebih lanjut atau jadwal kunjungan, silakan hubungi kami via:</p>
-      <ul>
+      <h5 class="green-text text-darken-3">Lokasi dan Kontak Kami</h5>
+      <p>Untuk informasi lebih lanjut atau jadwal kunjungan, Anda dapat mengunjungi lokasi kami atau menghubungi kami via:</p>
+
+      <div class="responsive-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0127156475606!2d106.8271530153163!3d-6.1753922955324605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f49aad0a1f09%3A0x180b7a42c7fbd121!2sMonumen%20Nasional%20(Monas)!5e0!3m2!1sen!2sid!4v1702100000000!5m2!1sen!2sid" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Properti Impian"
+        ></iframe>
+      </div>
+
+      <ul class="contact-list">
         <li>Email: <a href="mailto:info@propertiimpian.com">info@propertiimpian.com</a></li>
         <li>Telepon: <a href="tel:+628123456789">+62 812-3456-789</a></li>
+        <li>Alamat: Jl. Merdeka No.10, Jakarta Pusat, Indonesia</li>
       </ul>
     </section>
   </main>
 
-  <footer class="page-footer green darken-1 center-align">
+  <!-- Footer -->
+  <footer class="page-footer">
     <div class="container">
-      &copy; 2025 Properti Impian. All rights reserved.
+      PropertiImpian © 2025 - Semua hak dilindungi
     </div>
   </footer>
 
-  <!-- Materialize JS & Icons CDN -->
+  <!-- Materialize & JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(elems);
+      var instances = M.Sidenav.init(elems);
     });
   </script>
 
