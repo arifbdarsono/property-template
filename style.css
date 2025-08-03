@@ -1,0 +1,37 @@
+.hero-image {
+  height: 400px;
+  background-image: url('https://placehold.co/1400x400/png?text=Rumah+Modern');
+  background-size: cover;
+  background-position: center;
+}
+
+.price-tag {
+  font-size: 2rem;
+  color: #43a047;
+  font-weight: 700;
+}
+
+main {
+  padding: 20px 15px;
+}
+
+footer.page-footer {
+  padding: 10px 0;
+}
+
+/* Override Material Icons with Font Awesome in sidenav */
+.sidenav .fa {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero-image {
+    height: 250px;
+  }
+  .price-tag {
+    font-size: 1.5rem;
+  }
+}
