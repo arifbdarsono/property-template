@@ -6,6 +6,8 @@
   <title>Jual Rumah - Properti Impian</title>
   <!-- Materialize CSS CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <style>
     .hero-image {
       height: 400px;
@@ -23,6 +25,12 @@
     footer.page-footer {
       padding: 10px 0;
     }
+    /* Override Material Icons with Font Awesome in sidenav */
+    .sidenav .fa {
+      font-size: 1.2rem;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -32,7 +40,7 @@
     <nav class="green darken-1">
       <div class="nav-wrapper container">
         <a href="#!" class="brand-logo">PropertiImpian</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#features">Fitur</a></li>
           <li><a href="#gallery">Galeri</a></li>
@@ -44,18 +52,18 @@
     <!-- Side navigation drawer -->
     <ul id="slide-out" class="sidenav">
       <li><div class="user-view green lighten-2">
-        <a href="#user"><img class="circle" src="https://source.unsplash.com/80x80/?house" alt="Profile"/></a>
+        <a href="#user"><img class="circle" src="https://placehold.co/80x80/png?text=House" alt="Profile"/></a>
         <a href="#name"><span class="white-text name">Properti Impian</span></a>
         <a href="#email"><span class="white-text email">info@propertiimpian.com</span></a>
       </div></li>
-      <li><a href="#features"><i class="material-icons">home</i>Fitur</a></li>
-      <li><a href="#gallery"><i class="material-icons">photo</i>Galeri</a></li>
-      <li><a href="#contact"><i class="material-icons">phone</i>Kontak</a></li>
+      <li><a href="#features"><i class="fa fa-home"></i>Fitur</a></li>
+      <li><a href="#gallery"><i class="fa fa-image"></i>Galeri</a></li>
+      <li><a href="#contact"><i class="fa fa-phone"></i>Kontak</a></li>
     </ul>
   </header>
 
   <!-- Hero image -->
-  <section class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1560448070-7e8f88bcb38b?auto=format&fit=crop&w=1400&q=80');">
+  <section class="hero-image" style="background-image: url('https://placehold.co/1400x400/png?text=Rumah+Modern');">
   </section>
 
   <main class="container">
@@ -83,17 +91,17 @@
         <h5>Galeri Foto</h5>
         <div class="card">
           <div class="card-image">
-            <img src="https://source.unsplash.com/400x300/?house,garden" alt="Taman Rumah"/>
+            <img src="https://placehold.co/400x300/png?text=Taman+Rumah" alt="Taman Rumah"/>
           </div>
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="https://source.unsplash.com/400x300/?kitchen,modern" alt="Dapur Modern"/>
+            <img src="https://placehold.co/400x300/png?text=Dapur+Modern" alt="Dapur Modern"/>
           </div>
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="https://source.unsplash.com/400x300/?bedroom,cozy" alt="Kamar Tidur"/>
+            <img src="https://placehold.co/400x300/png?text=Kamar+Tidur+Nyaman" alt="Kamar Tidur"/>
           </div>
         </div>
       </div>
