@@ -1,119 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Properti Unggulan</title>
-  <!-- Materialize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Ikon Materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jual Rumah - Properti Impian</title>
+  <!-- Materialize CSS CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
   <style>
     .hero-image {
-      background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');
-      height: 500px;
+      height: 400px;
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .hero-text {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 20px;
-      text-align: center;
+    .price-tag {
+      font-size: 2rem;
+      color: #43a047;
+      font-weight: 700;
     }
-    .card .card-image img {
-      height: 200px;
-      object-fit: cover;
+    main {
+      padding: 20px 15px;
+    }
+    footer.page-footer {
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="nav-wrapper blue darken-3">
-      <a href="#" class="brand-logo">PropertiKu</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Daftar Properti</a></li>
-        <li><a href="#">Kontak</a></li>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="green darken-1">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">PropertiImpian</a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Side navigation drawer -->
+    <ul id="slide-out" class="sidenav">
+      <li><div class="user-view green lighten-2">
+        <a href="#user"><img class="circle" src="https://source.unsplash.com/80x80/?house" alt="Profile"/></a>
+        <a href="#name"><span class="white-text name">Properti Impian</span></a>
+        <a href="#email"><span class="white-text email">info@propertiimpian.com</span></a>
+      </div></li>
+      <li><a href="#features"><i class="material-icons">home</i>Fitur</a></li>
+      <li><a href="#gallery"><i class="material-icons">photo</i>Galeri</a></li>
+      <li><a href="#contact"><i class="material-icons">phone</i>Kontak</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero image -->
+  <section class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1560448070-7e8f88bcb38b?auto=format&fit=crop&w=1400&q=80');">
+  </section>
+
+  <main class="container">
+    <!-- Property Info -->
+    <div class="row" id="features">
+      <div class="col s12 m8">
+        <h4>Rumah Modern dan Nyaman di Lokasi Strategis</h4>
+        <p>
+          Rumah ini dilengkapi dengan 3 kamar tidur, 2 kamar mandi, taman luas, dan garasi untuk dua mobil. Cocok untuk keluarga yang menginginkan hunian nyaman dan mudah dijangkau ke berbagai fasilitas umum.
+        </p>
+        <ul class="collection with-header">
+          <li class="collection-header"><h5>Fitur Utama</h5></li>
+          <li class="collection-item">Luas Bangunan: 150 m²</li>
+          <li class="collection-item">Luas Tanah: 200 m²</li>
+          <li class="collection-item">Dapur Modern & Terbuka</li>
+          <li class="collection-item">Sistem Keamanan 24 Jam</li>
+          <li class="collection-item">Dekat Sekolah, Mall, dan Rumah Sakit</li>
+        </ul>
+        <h5 class="price-tag">Rp 1.200.000.000,-</h5>
+        <a class="btn-large green waves-effect waves-light" href="#contact">Hubungi Kami</a>
+      </div>
+
+      <!-- Gallery -->
+      <div class="col s12 m4" id="gallery">
+        <h5>Galeri Foto</h5>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/400x300/?house,garden" alt="Taman Rumah"/>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/400x300/?kitchen,modern" alt="Dapur Modern"/>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/400x300/?bedroom,cozy" alt="Kamar Tidur"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h5>Kontak Kami</h5>
+      <p>Untuk informasi lebih lanjut atau jadwal kunjungan, silakan hubungi kami via:</p>
+      <ul>
+        <li>Email: <a href="mailto:info@propertiimpian.com">info@propertiimpian.com</a></li>
+        <li>Telepon: <a href="tel:+628123456789">+62 812-3456-789</a></li>
       </ul>
-    </div>
-  </nav>
+    </section>
+  </main>
 
-  <!-- Hero Section -->
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>Temukan Rumah Impian Anda</h1>
-      <a class="waves-effect waves-light btn-large">Lihat Properti</a>
-    </div>
-  </div>
-
-  <!-- Properti Unggulan -->
-  <div class="container">
-    <h4 class="center-align">Properti Unggulan</h4>
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c">
-            <span class="card-title">Rumah Mewah</span>
-          </div>
-          <div class="card-content">
-            <p>Rp 1.5 Miliar</p>
-            <p>3 Kamar Tidur, 2 Kamar Mandi</p>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c">
-            <span class="card-title">Rumah Minimalis</span>
-          </div>
-          <div class="card-content">
-            <p>Rp 1.2 Miliar</p>
-            <p>2 Kamar Tidur, 1 Kamar Mandi</p>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c">
-            <span class="card-title">Apartemen</span>
-          </div>
-          <div class="card-content">
-            <p>Rp 800 Juta</p>
-            <p>1 Kamar Tidur, 1 Kamar Mandi</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="page-footer blue darken-3">
+  <footer class="page-footer green darken-1 center-align">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">PropertiKu</h5>
-          <p class="grey-text text-lighten-4">Solusi terbaik untuk menemukan rumah impian Anda.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Kontak</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Email: info@propertiku.com</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Telepon: +62 123 456 789</a></li>
-          </ul>
-        </div>
-      </div>
+      &copy; 2025 Properti Impian. All rights reserved.
     </div>
   </footer>
 
-  <!-- Script Materialize -->
+  <!-- Materialize JS & Icons CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
+
 </body>
 </html>
